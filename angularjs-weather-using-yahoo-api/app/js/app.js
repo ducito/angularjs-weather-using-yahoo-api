@@ -3,7 +3,6 @@
 var weatherApp = angular.module('weatherApp', [])
     .value('HOST', '')
     .controller('weatherCtrl', ['$scope', 'weatherService', function ($scope, weatherService) {
-
         function fetchWeather(zip) {
             weatherService.getWeather(zip).then(function (data) {
                 $scope.place = data;

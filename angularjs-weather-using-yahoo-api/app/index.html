@@ -5,15 +5,15 @@
     <title></title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/lib/jquery-1.11.1.min.js"></script>
-    <script src="js/lib/angular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/app.js"></script>
 </head>
 <body ng-controller="weatherCtrl">
 <div class="container col-md-12">
 
-    <div class="col-md-12">
+    <div class="col-md-12" style="min-height: 100px">
         <h1 style="color: #337ab7"><a href="http://facebook.com/ducit" style="text-decoration: none">CùiMía</a></h1>
     </div>
     <div class="col-md-4 left-panel" style="padding: 20px;">
@@ -28,8 +28,7 @@
             <h3>or city name:</h3>
 
             <form style="margin: 20px 0 20px 0" style="padding: 0px">
-                <input type="text" class="form-control" id="cityname" ng-model="cityname" placeholder="ha noi"
-                       autofocus>
+                <input type="text" class="form-control" id="cityname" ng-model="cityname" placeholder="ha noi" autofocus>
                 <input type="submit" class="btn btn-primary pull-right" value="Search"
                        ng-click="findWeatherByCityName(cityname)">
             </form>
